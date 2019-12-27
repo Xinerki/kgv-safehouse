@@ -88,34 +88,34 @@ safehouses = {
 	},
 	
 	club = {
-		position = vector3(-1286.05, -651.95, 26.55),
+		position = vector3(-430.3, -24.3, 46.2),
 		destination = vector4(-1569.75, -3014.4, -74.45, 0.0),
 	},
 	clubExit = {
 		position = vector3(-1569.5, -3017.2, -74.45),
-		destination = vector4(-1285.1, -650.0, 26.55, 38.3),
+		destination = vector4(-428.35, -24.25, 46.2, -94.15),
 	},
 	
 	clubGarage = {
-		position = vector3(-1237.25, -693.65, 23.75),
+		position = vector3(-454.75, -48.45, 44.5),
 		destination = vector4(-1642.7, -2989.7, -76.95, -92.05),
 	},
 	clubGarageExit = {
 		position = vector3(-1644.9, -2989.8, -76.75),
-		destination = vector4(-1235.85, -692.6, 23.75, -55.25),
+		destination = vector4(-457.8, -51.1, 44.5, 122.65),
 	},
 	
 	clubGarageVehicle = {
 		vehicle = true,
-		position = vector3(-1235.25, -692.1, 23.75),
+		position = vector3(-454.9, -49.5, 44.5),
 		destination = vector3(-1636.05, -2990.15, -77.95),
 		rotation = vector3(-6.31, -0.08, -90.71),
 	},	
 	clubGarageVehicleExit = {
 		vehicle = true,
 		position = vector3(-1642.8, -2990.1, -77.2),
-		destination = vector3(-1230.6, -692.45, 23.25),
-		rotation = vector3(-3.61, 2.39, -108.89),
+		destination = vector3(-462.75, -51.95, 43.9),
+		rotation = vector3(0.0, 0.0, 86.5),
 	},
 	
 	muriel = {
