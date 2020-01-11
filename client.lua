@@ -158,6 +158,15 @@ safehouses = {
 		rotation = vector3(0.0, 0.0, 147.8),
 	},
 	
+	switch = {
+		position = vector3(-614.65, 46.25, 43.55),
+		destination = vector4(-605.6, 58.95, 98.2, 90.0)
+	},
+	switchExit = {
+		position = vector3(-603.0, 58.9, 98.2),
+		destination = vector4(-614.65, 43.05, 43.55, -180.0),
+	},
+	
 }
 
 --DrawMarker(type, x, y, z, dirX, dirY, dirZ, rotX, rotY, rotZ, 
@@ -173,8 +182,10 @@ Citizen.CreateThread(function()
 		for i,v in pairs(safehouses) do
 			if v.vehicle ~= true then
 				if not IsPedInAnyVehicle(PlayerPedId(), false) then
-					DrawMarker(1, v.position.x, v.position.y, v.position.z-1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.5, 255, 255, 100, 50, false, false, false, true)
-					DrawMarker(1, v.position.x, v.position.y, v.position.z-1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.1, 1.1, 1.5, 255, 255, 100, 100, false, false, false, true)
+					DrawMarker(1, v.position.x, v.position.y, v.position.z-1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.3, 255, 255, 100, 150, false, false, false, true)
+					-- DrawMarker(0, v.position.x, v.position.y, v.position.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.8, 0.8, 1.0, 255, 255, 100, 150, true, false, false, true)
+					-- DrawMarker(2, v.position.x, v.position.y, v.position.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.8, 0.8, -1.0, 255, 255, 100, 50, false, true, false, false)
+					-- DrawMarker(1, v.position.x, v.position.y, v.position.z-1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.5, 0.5, 0.5, 255, 255, 100, 100, false, false, false, true)
 					local pos = GetEntityCoords(PlayerPedId())
 					if GetDistanceBetweenCoords(pos, v.position, true) < 1.0 then
 						DoScreenFadeOut(1000)
@@ -192,8 +203,8 @@ Citizen.CreateThread(function()
 				end
 			else
 				if IsPedInAnyVehicle(PlayerPedId(), false) then
-					DrawMarker(1, v.position.x, v.position.y, v.position.z-1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 3.0, 3.0, 1.5, 255, 255, 100, 50, false, false, false, true)
-					DrawMarker(1, v.position.x, v.position.y, v.position.z-1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.5, 1.5, 1.5, 255, 255, 100, 100, false, false, false, true)
+					DrawMarker(1, v.position.x, v.position.y, v.position.z-1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 3.0, 3.0, 0.3, 255, 255, 100, 150, false, false, false, true)
+					-- DrawMarker(1, v.position.x, v.position.y, v.position.z-1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.5, 1.5, 0.5, 255, 255, 100, 100, false, false, false, true)
 					local pos = GetEntityCoords(GetVehiclePedIsIn(PlayerPedId(), false))
 					if GetDistanceBetweenCoords(pos, v.position, true) < 3.0 then
 						DoScreenFadeOut(1000)
