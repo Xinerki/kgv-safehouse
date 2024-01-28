@@ -11,13 +11,22 @@ end
 
 safehouses = {
 
+	-- xin = {
+		-- position = vector3(-266.7, -955.64, 31.2),
+		-- destination = vector4(-272.45, -940.2, 92.5, 70.0),
+	-- },
+	-- xinExit = {
+		-- position = vector3(-269.95, -941.15, 92.5),
+		-- destination = vector4(-267.25, -959.65, 31.2, 156.25),
+	-- },
+	
 	xin = {
-		position = vector3(-266.7, -955.64, 31.2),
-		destination = vector4(-272.45, -940.2, 92.5, 70.0),
+		position = vector3(-305.05, -721.05, 28.0),
+		destination = vector4(-285.6, -723.6, 125.45, -110.6),
 	},
 	xinExit = {
-		position = vector3(-269.95, -941.15, 92.5),
-		destination = vector4(-267.25, -959.65, 31.2, 156.25),
+		position = vector3(-288.35, -722.45, 125.45),
+		destination = vector4(-306.15, -724.25, 28.0, 160.8),
 	},
 	
 	matt = {
@@ -31,7 +40,7 @@ safehouses = {
 	
 	ambiguX = {
 		position = vector3(-1370.95, -503.5, 33.15),
-		destination = vector4(-1396.35, -480.0, 71.0, -83.7)
+		destination = vector4(-1396.35, -480.0, 72.0, -83.7)
 	},
 	ambiguXExit = {
 		position = vector3(-1399.35, -480.4, 72.0),
@@ -256,6 +265,67 @@ safehouses = {
 		destination = vector4(-853.03, 695.39, 148.78, 0.0),
 	},
 	
+	mazebank = {
+		position = vector3(-68.6, -800.9, 44.2),
+		destination = vector4(-66.1, -822.15, 321.25, -110.2)
+	},
+	mazebankExit = {
+		position = vector3(-66.95, -821.95, 321.25),
+		destination = vector4(-66.5, -798.9, 44.2, -42.15),
+	},
+	
+	studio = {
+		position = vector3(-840.5, -231.25, 37.2),
+		destination = vector4(-1021.95, -90.25, -99.45, 0.0),
+	},
+	studioExit = {
+		position = vector3(-1021.9, -92.35, -99.45),
+		destination = vector4(-838.1, -229.95, 37.2, -61.3),
+	},
+	
+	studioRooftop = {
+		position = vector3(-865.75, -221.72, 40.30),
+		destination = vector4(-843.71, -236.08, 61.01, 36.67),
+	},
+	studioRooftopExit = {
+		position = vector3(-843.57, -236.80, 61.01),
+		destination = vector4(-866.66, -222.075, 39.58, 114.88),
+	},
+	
+	meth = {
+		position = vector3(49.85, -1453.6, 29.3),
+		destination = vector4(997.7, -3199.15, -36.4, 0.0),
+	},
+	methExit = {
+		position = vector3(997.1, -3200.75, -36.4),
+		destination = vector4(47.05, -1451.65, 29.3, 50.3),
+	},
+	
+	meetGarage = {
+		vehicle = true,
+		position = vector3(772.8, -1866.95, 28.65),
+		destination = vector3(-2215.15, 1153.1, -23.9),
+		rotation = vector3(-0.0, 0.0, -141.9),
+	},
+	meetGarageExit = {
+		vehicle = true,
+		position = vector3(-2220.55, 1158.1, -23.9),
+		destination = vector3(783.0, -1868.15, 28.6),
+		rotation = vector3(-0.0, 0.0, -98.25),
+	},
+	
+	meetGarageTrack = {
+		vehicle = true,
+		position = vector3(-2152.45, 1106.0, -24.75),
+		destination = vector3(-2136.4, 1106.05, -27.1),
+		rotation = vector3(-0.0, 0.0, -90.0),
+	},
+	meetGarageTrackExit = {
+		vehicle = true,
+		position = vector3(-2144.65, 1106.0, -25.55),
+		destination = vector3(-2159.05, 1106.05, -24.75),
+		rotation = vector3(0.0, 0.0, 90.0),
+	},
 }
 
 --DrawMarker(type, x, y, z, dirX, dirY, dirZ, rotX, rotY, rotZ, 
@@ -291,11 +361,12 @@ Citizen.CreateThread(function()
 							SetPlayerControl(PlayerId(), true, 0)
 							FreezeEntityPosition(PlayerPedId(), false)
 							DoScreenFadeIn(1000)
+							repeat Wait(0) until #(GetEntityCoords(PlayerPedId()) - v.destination.xyz) > 1.0
 						end
 					end
 				else
 					if IsPedInAnyVehicle(PlayerPedId(), false) then
-						DrawMarker(1, v.position.x, v.position.y, v.position.z-1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 3.0, 3.0, 0.3, 255, 255, 100, 150, false, false, false, true)
+						DrawMarker(1, v.position.x, v.position.y, v.position.z-0.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 3.0, 3.0, 0.3, 255, 255, 100, 150, false, false, false, true)
 						-- DrawMarker(1, v.position.x, v.position.y, v.position.z-1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.5, 1.5, 0.5, 255, 255, 100, 100, false, false, false, true)
 						local pos = GetEntityCoords(GetVehiclePedIsIn(PlayerPedId(), false))
 						if GetDistanceBetweenCoords(pos, v.position, true) < 3.0 then
