@@ -29,14 +29,14 @@ safehouses = {
 		destination = vector4(-306.15, -724.25, 28.0, 160.8),
 	},
 	
-	matt = {
-		position = vector3(-906.8, -451.9, 39.6),
-		destination = vector4(-891.9, -434.4, 121.6, 24.35),
-	},
-	mattExit = {
-		position = vector3(-890.75, -436.7, 121.6),
-		destination = vector4(-908.95, -453.3, 39.6, 108.2),
-	},
+	-- matt = {
+	-- 	position = vector3(-906.8, -451.9, 39.6),
+	-- 	destination = vector4(-891.9, -434.4, 121.6, 24.35),
+	-- },
+	-- mattExit = {
+	-- 	position = vector3(-890.75, -436.7, 121.6),
+	-- 	destination = vector4(-908.95, -453.3, 39.6, 108.2),
+	-- },
 	
 	ambiguX = {
 		position = vector3(-1370.95, -503.5, 33.15),
@@ -47,23 +47,23 @@ safehouses = {
 		destination = vector4(-1372.6, -505.1, 32.15, 127.6),
 	},
 	
-	clubhouse = {
-		position = vector3(-1470.8, -921.1, 10.0),
-		destination = vector4(1121.0, -3151.0, -37.1, 2.4)
-	},
-	clubhouseExit = {
-		position = vector3(1121.0, -3152.4, -37.1),
-		destination = vector4(-1469.25, -922.45, 10.0, -130.25),
-	},
+	-- clubhouse = {
+	-- 	position = vector3(-1470.8, -921.1, 10.0),
+	-- 	destination = vector4(1121.0, -3151.0, -37.1, 2.4)
+	-- },
+	-- clubhouseExit = {
+	-- 	position = vector3(1121.0, -3152.4, -37.1),
+	-- 	destination = vector4(-1469.25, -922.45, 10.0, -130.25),
+	-- },
 	
-	farbod = {
-		position = vector3(-777.1, 319.5, 85.65),
-		destination = vector4(-779.75, 323.6, 211.95, -91.9)
-	},
-	farbodExit = {
-		position = vector3(-783.9, 323.65, 211.95),
-		destination = vector4(-777.0, 316.95, 85.65, 178.4),
-	},
+	-- farbod = {
+	-- 	position = vector3(-777.1, 319.5, 85.65),
+	-- 	destination = vector4(-779.75, 323.6, 211.95, -91.9)
+	-- },
+	-- farbodExit = {
+	-- 	position = vector3(-783.9, 323.65, 211.95),
+	-- 	destination = vector4(-777.0, 316.95, 85.65, 178.4),
+	-- },
 	
 	cabdep = {
 		position = vector3(-72.3, -1821.35, 27.9),
@@ -167,14 +167,14 @@ safehouses = {
 		destination = vector4(307.55, -1003.25, 29.3, 2.25),
 	},
 	
-	switch = {
-		position = vector3(-614.65, 46.25, 43.55),
-		destination = vector4(-605.6, 58.95, 98.2, 90.0)
-	},
-	switchExit = {
-		position = vector3(-603.0, 58.9, 98.2),
-		destination = vector4(-614.65, 43.05, 43.55, -180.0),
-	},
+	-- switch = {
+	-- 	position = vector3(-614.65, 46.25, 43.55),
+	-- 	destination = vector4(-605.6, 58.95, 98.2, 90.0)
+	-- },
+	-- switchExit = {
+	-- 	position = vector3(-603.0, 58.9, 98.2),
+	-- 	destination = vector4(-614.65, 43.05, 43.55, -180.0),
+	-- },
 	
 	casino = {
 		position = vector3(924.4, 46.6, 81.1),
@@ -256,14 +256,14 @@ safehouses = {
 		destination = vector4(966.7, 63.95, 112.55, 81.8),
 	},
 	
-	theo = {
-		position = vector3(-852.96, 694.074, 149.04),
-		destination = vector4(-859.85, 689.82, 152.86, 180.0)
-	},
-	theoExit = {
-		position = vector3(-859.95, 691.21, 152.86),
-		destination = vector4(-853.03, 695.39, 148.78, 0.0),
-	},
+	-- theo = {
+	-- 	position = vector3(-852.96, 694.074, 149.04),
+	-- 	destination = vector4(-859.85, 689.82, 152.86, 180.0)
+	-- },
+	-- theoExit = {
+	-- 	position = vector3(-859.95, 691.21, 152.86),
+	-- 	destination = vector4(-853.03, 695.39, 148.78, 0.0),
+	-- },
 	
 	mazebank = {
 		position = vector3(-68.6, -800.9, 44.2),
